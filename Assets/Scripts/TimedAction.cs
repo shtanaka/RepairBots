@@ -58,4 +58,8 @@ public class TimedAction : MonoBehaviour
             }
         } 
     }
+
+    public void setTimer(float newTimer) {
+        this.timer = newTimer;
+    }
 }
