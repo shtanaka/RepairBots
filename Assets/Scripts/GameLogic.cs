@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
@@ -27,5 +28,10 @@ public class GameLogic : MonoBehaviour
     public void generateRandomTimer(TimedAction timedActionScript) {
         float randomTimer = Random.Range(minimalTimer, maximalTimer);
         timedActionScript.setTimer(randomTimer);
+    }
+
+    public void RestartGame() {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 }

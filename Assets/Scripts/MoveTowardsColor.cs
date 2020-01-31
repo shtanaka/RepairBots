@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class MoveTowardsColor : MonoBehaviour
 {
+    [SerializeField]
+    private UnityEvent eventToCall;
+
     [SerializeField]
     private Color initialColor;
 
@@ -23,5 +27,10 @@ public class MoveTowardsColor : MonoBehaviour
     public void StepTowardsColor(float step) {
         incrementalStep = Mathf.Max(0.0f, Mathf.Min(1.0f, incrementalStep + step));
         image.color = Color.Lerp(initialColor, finalColor, incrementalStep);
+
+        if(incrementalStep >= 1.0 && eventToCall != null) {
+            eventToCall.Invoke();
+            Destroy(this);
+        }
     }
 }
