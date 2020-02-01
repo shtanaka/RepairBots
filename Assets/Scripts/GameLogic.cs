@@ -99,7 +99,6 @@ public class GameLogic : MonoBehaviour
             int count = listOfBadEvents.Length;
 
             GameObject badEvent = (forceEvent == -1) ? listOfBadEvents[Random.Range(0, count)] : listOfBadEvents[Mathf.Min(count - 1, Mathf.Max(forceEvent, 0))];
-            Debug.Log(badEvent);
             if(!badEvent.activeSelf) {
                 badEvent.SetActive(true);
             }

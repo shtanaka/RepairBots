@@ -162,7 +162,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.825
+          m_FloatArgument: 0.7
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -170,12 +170,20 @@ MonoBehaviour:
   maximalTimerRobots: 8
   minimalTimerPylon: 2
   maximalTimerPylon: 8
-  minimalTimerBadEvents: 5
-  maximalTimerBadEvents: 15
+  minimalTimerBadEvents: 11.5
+  maximalTimerBadEvents: 16.5
   startWithRandomTimers: 1
   chanceOfBadEvent: 90
   listOfBadEvents:
+  - {fileID: 276994832}
+  - {fileID: 2088881400}
+  - {fileID: 629126971}
+  - {fileID: 721657057}
+  - {fileID: 137626828}
+  - {fileID: 396000435}
+  - {fileID: 63013836}
   - {fileID: 1789644712}
+  forceEvent: 5
 --- !u!4 &55165083
 Transform:
   m_ObjectHideFlags: 0
@@ -227,6 +235,43 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 5d60829dd2923493a8a72523ba0d52c3, type: 2}
   canvasAnimator: {fileID: 1646334466}
   cleanerRobotPanel: {fileID: 1045270705}
+  chatBotEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1497948230}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1898810299}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1497948234}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ChatBotIn
+          m_BoolArgument: 1
+        m_CallState: 2
+  chatBotGameObject: {fileID: 1497948230}
 --- !u!1 &63013836
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +387,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -570,6 +616,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -1065,6 +1112,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -1230,7 +1278,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1497948230}
+      - m_Target: {fileID: 55165085}
+        m_MethodName: CheckChatBotAvailability
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 396000435}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1239,20 +1298,10 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1497948234}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ChatBotIn
           m_BoolArgument: 0
         m_CallState: 2
-  timer: 1
+  timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -1455,7 +1504,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.125
+          m_FloatArgument: -0.0125
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1504,6 +1553,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 1
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -1549,13 +1599,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504806172}
-  m_LocalRotation: {x: -0, y: 0.016620416, z: -0, w: 0.9998619}
-  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99921036, y: 0.9992102, z: 0.9992104}
   m_Children: []
   m_Father: {fileID: 1342855725}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 1.9050001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1014, y: -757}
@@ -2011,6 +2061,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -7011,6 +7062,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -13039,13 +13091,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209833816}
-  m_LocalRotation: {x: -0, y: 0.016620416, z: -0, w: 0.9998619}
-  m_LocalPosition: {x: 0, y: 0, z: 65}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99921036, y: 0.9992102, z: 0.9992104}
   m_Children: []
   m_Father: {fileID: 1342855725}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 1.9050001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1007, y: 726}
@@ -13630,6 +13682,7 @@ GameObject:
   - component: {fileID: 1497948233}
   - component: {fileID: 1497948232}
   - component: {fileID: 1497948234}
+  - component: {fileID: 1497948235}
   m_Layer: 5
   m_Name: ReportPanel
   m_TagString: Untagged
@@ -13712,6 +13765,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1497948235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497948230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57745322d78054abfa4b190d2904701d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553848654
 GameObject:
   m_ObjectHideFlags: 0
@@ -13952,6 +14017,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 20
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -14095,6 +14161,10 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 5d60829dd2923493a8a72523ba0d52c3, type: 2}
   canvasAnimator: {fileID: 1646334466}
   cleanerRobotPanel: {fileID: 1045270705}
+  chatBotEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  chatBotGameObject: {fileID: 0}
 --- !u!114 &1680251067 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
@@ -14710,6 +14780,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0
@@ -15062,17 +15133,6 @@ MonoBehaviour:
   eventToCall:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898810299}
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1497948234}
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -15084,7 +15144,8 @@ MonoBehaviour:
           m_StringArgument: ChatBotOut
           m_BoolArgument: 0
         m_CallState: 2
-  timer: 0.2
+  timer: 0.3
+  initialTimer: 0.3
 --- !u!114 &1898810300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15397,6 +15458,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   timer: 4
+  counter: 0
   resetAfterTimer: 1
   displayText: {fileID: 0}
   showTimerDecreasing: 0

@@ -12,6 +12,10 @@ public class TimedAction : MonoBehaviour
     [Tooltip("Timer to activate the action (ms).")]
     [Range(0.0f, 40.0f)]
     private float timer;
+
+    [SerializeField]
+    [Tooltip("Timer to activate the action (ms).")]
+    [Range(0.0f, 40.0f)]
     private float counter;
 
     [SerializeField]

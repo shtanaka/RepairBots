@@ -24,6 +24,7 @@ public class TyperScript : MonoBehaviour
     [SerializeField, Range(0.0f, 5.0f)]
     private float timer;
 
+    [SerializeField, Range(0.0f, 5.0f)]
     private float initialTimer;
 
     private float counter;
@@ -32,7 +33,6 @@ public class TyperScript : MonoBehaviour
 
     private void Start() {
         ResetValues();
-        initialTimer = timer;
     }
 
 
@@ -51,6 +51,7 @@ public class TyperScript : MonoBehaviour
                     } else {
                         if(eventToCall != null) {
                             eventToCall.Invoke();
+                            break;
                         }
                     }
                 }

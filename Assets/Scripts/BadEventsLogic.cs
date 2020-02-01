@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Events;
 
 public class BadEventsLogic : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class BadEventsLogic : MonoBehaviour
     private Animator canvasAnimator;
     [SerializeField]
     private GameObject cleanerRobotPanel;
+
+    [SerializeField]
+    private UnityEvent chatBotEvent;
+
+    [SerializeField]
+    private GameObject chatBotGameObject;
 
     public void Start() {
         ChromaticAberration ca = null;
@@ -84,5 +91,11 @@ public class BadEventsLogic : MonoBehaviour
         Time.timeScale = 1.0f;
         setChromaticAberrationValue(0.0f);
         setContrast(36);
+    }
+
+    public void CheckChatBotAvailability() {
+        if(!chatBotGameObject.activeSelf) {
+            chatBotEvent.Invoke();
+        }
     }
 }
