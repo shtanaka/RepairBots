@@ -34,7 +34,7 @@ public class TimedAction : MonoBehaviour
     private float remainder;
 
     private void Awake() {
-        counter = 0.0f;
+        Restart();
         hasDisplayText = displayText != null;
     }
 
@@ -57,6 +57,10 @@ public class TimedAction : MonoBehaviour
                 }
             }
         } 
+    }
+
+    public void Restart() {
+        counter = 0.0f;
     }
 
     public void setTimer(float newTimer) {

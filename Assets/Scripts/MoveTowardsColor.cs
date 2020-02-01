@@ -6,6 +6,10 @@ using UnityEngine.Events;
 
 public class MoveTowardsColor : MonoBehaviour
 {
+
+    [SerializeField]
+    private UnityEvent eventToCallZero;
+
     [SerializeField]
     private UnityEvent eventToCall;
 
@@ -34,8 +38,13 @@ public class MoveTowardsColor : MonoBehaviour
             tickEventToCall.Invoke();
         }
 
-        if(incrementalStep >= 1.0 && eventToCall != null) {
+        if(incrementalStep == 1.0 && eventToCall != null) {
             eventToCall.Invoke();
+            Destroy(this);
+        }
+
+        if(incrementalStep == 0.0 && eventToCallZero != null) {
+            eventToCallZero.Invoke();
             Destroy(this);
         }
     }

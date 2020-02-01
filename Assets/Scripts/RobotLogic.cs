@@ -13,4 +13,9 @@ public class RobotLogic : MonoBehaviour
     void Awake() {
         animator.SetFloat("RobotAnimationSpeed", Random.Range(animationSpeedVariation.x, animationSpeedVariation.y));
     }
+
+    void TakeDamage() {
+        animator.SetTrigger("RobotDamage");
+        
+    }
 }
