@@ -15,6 +15,20 @@ public class BadEventsLogic : MonoBehaviour
     [SerializeField]
     private GameObject cleanerRobotPanel;
 
+    public void Start() {
+        ChromaticAberration ca = null;
+        profile.TryGetSettings<ChromaticAberration>(out ca);
+        if(ca != null) {
+            ca.intensity.value = 0;
+        }
+
+        ColorGrading cg = null;
+        profile.TryGetSettings<ColorGrading>(out cg);
+        if(cg != null) {
+            cg.colorFilter.value = Color.white;
+        }
+    }
+
     public void setChromaticAberrationValue(float value) {
         ChromaticAberration ca = null;
         profile.TryGetSettings<ChromaticAberration>(out ca);

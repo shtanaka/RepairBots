@@ -79,6 +79,7 @@ public class GameLogic : MonoBehaviour
     public void generateRandomTimerBadEvents(TimedAction timedActionScript) {
         float randomTimer = Random.Range(minimalTimerBadEvents, maximalTimerBadEvents);
         timedActionScript.setTimer(randomTimer);
+        timedActionScript.Restart();
     }
 
     public void RestartGame() {
@@ -94,7 +95,7 @@ public class GameLogic : MonoBehaviour
         if(Random.Range(0.0f, 100.0f) < chanceOfBadEvent) {
             int count = listOfBadEvents.Length;
 
-            listOfBadEvents[Random.Range(0, count - 1)].SetActive(true);
+            listOfBadEvents[Random.Range(0, count)].SetActive(true);
         }
     }
 }
