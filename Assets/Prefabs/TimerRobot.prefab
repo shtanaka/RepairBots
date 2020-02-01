@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7653660955729789209}
   - component: {fileID: 7653660955729789191}
   m_Layer: 5
-  m_Name: TimerRobot01
+  m_Name: TimerRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
