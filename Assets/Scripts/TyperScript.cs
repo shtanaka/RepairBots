@@ -64,7 +64,7 @@ public class TyperScript : MonoBehaviour
         timer = Mathf.Max(0.0f, timer - value);
         if(timer == 0.0f) {
             charStep++;
-            timer = initialTimer;
+            // timer = initialTimer;
         }
     }
 
