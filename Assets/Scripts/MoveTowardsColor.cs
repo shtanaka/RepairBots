@@ -10,6 +10,9 @@ public class MoveTowardsColor : MonoBehaviour
     private UnityEvent eventToCall;
 
     [SerializeField]
+    private UnityEvent tickEventToCall;
+
+    [SerializeField]
     private Color initialColor;
 
     [SerializeField]
@@ -27,10 +30,17 @@ public class MoveTowardsColor : MonoBehaviour
     public void StepTowardsColor(float step) {
         incrementalStep = Mathf.Max(0.0f, Mathf.Min(1.0f, incrementalStep + step));
         image.color = Color.Lerp(initialColor, finalColor, incrementalStep);
+        if(tickEventToCall != null) {
+            tickEventToCall.Invoke();
+        }
 
         if(incrementalStep >= 1.0 && eventToCall != null) {
             eventToCall.Invoke();
             Destroy(this);
         }
+    }
+
+    public float getIncrementalStep() {
+        return incrementalStep;
     }
 }

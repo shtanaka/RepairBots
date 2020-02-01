@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
@@ -16,17 +17,51 @@ public class GameLogic : MonoBehaviour
     }
 
     [SerializeField]
-    [Tooltip("Minimal Timer for timedActionScripts (ms).")]
-    [Range(0.0f, 40.0f)]
-    private float minimalTimer;
+    private UnityEvent startGameEvents;
 
     [SerializeField]
-    [Tooltip("Maximal Timer for timedActionScripts (ms).")]
+    [Tooltip("Minimal Timer for Robots' timedActionScripts (ms).")]
     [Range(0.0f, 40.0f)]
-    private float maximalTimer;
+    private float minimalTimerRobots;
+    [SerializeField]
+    [Tooltip("Maximal Timer for Robots' timedActionScripts (ms).")]
+    [Range(0.0f, 40.0f)]
+    private float maximalTimerRobots;
+
+    [SerializeField]
+    [Tooltip("Minimal Timer for Pylon timedActionScripts (ms).")]
+    [Range(0.0f, 40.0f)]
+    private float minimalTimerPylon;
+    [SerializeField]
+    [Tooltip("Maximal Timer for Pylon timedActionScripts (ms).")]
+    [Range(0.0f, 40.0f)]
+    private float maximalTimerPylon;
+
+    [SerializeField]
+    [Tooltip("Minimal Timer for Bad Events' timedActionScripts (ms).")]
+    [Range(0.0f, 40.0f)]
+    private float minimalTimerBadEvents;
+    [SerializeField]
+    [Tooltip("Maximal Timer for Bad Events' timedActionScripts (ms).")]
+    [Range(0.0f, 40.0f)]
+    private float maximalTimerBadEvents;
+
+    private void Start() {
+        startGameEvents.Invoke();
+    }
 
     public void generateRandomTimer(TimedAction timedActionScript) {
-        float randomTimer = Random.Range(minimalTimer, maximalTimer);
+        float randomTimer = Random.Range(minimalTimerRobots, maximalTimerRobots);
+        timedActionScript.setTimer(randomTimer);
+    }
+
+    public void generateRandomTimerPylon(TimedAction timedActionScript) {
+        float randomTimer = Random.Range(minimalTimerPylon, maximalTimerPylon);
+        timedActionScript.setTimer(randomTimer);
+    }
+
+    public void generateRandomTimerBadEvents(TimedAction timedActionScript) {
+        float randomTimer = Random.Range(minimalTimerBadEvents, maximalTimerBadEvents);
         timedActionScript.setTimer(randomTimer);
     }
 
