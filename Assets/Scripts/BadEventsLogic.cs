@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -12,6 +10,10 @@ public class BadEventsLogic : MonoBehaviour
     private PostProcessVolume volume;
     [SerializeField]
     private PostProcessProfile profile;
+    [SerializeField]
+    private Animator canvasAnimator;
+    [SerializeField]
+    private GameObject cleanerRobotPanel;
 
     public void setChromaticAberrationValue(float value) {
         ChromaticAberration ca = null;
@@ -34,6 +36,17 @@ public class BadEventsLogic : MonoBehaviour
         profile.TryGetSettings<ColorGrading>(out cg);
         if(cg != null) {
             cg.colorFilter.value = Color.Lerp(Color.white, image.color, Random.Range(0.0f, 1.0f));
+        }
+    }
+
+    public void MoveCleanerRobot() {
+        float movement = Mathf.Max(0.0f, Mathf.Min(canvasAnimator.GetFloat("BlendCleanerRobot") + 0.125f, 1.0f));
+        canvasAnimator.SetFloat("BlendCleanerRobot", movement);
+
+        if(movement >= 1.0f) {
+            cleanerRobotPanel.SetActive(false);
+            canvasAnimator.SetFloat("BlendCleanerRobot", 0.0f);
+            canvasAnimator.SetTrigger("RemoveCleanerRobot");
         }
     }
 }
