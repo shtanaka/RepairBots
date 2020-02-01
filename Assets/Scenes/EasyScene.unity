@@ -612,7 +612,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.1
+          m_FloatArgument: -0.075
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -809,7 +809,7 @@ PrefabInstance:
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: -0.035
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -884,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0.055
+      value: 0.0575
       objectReference: {fileID: 0}
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -1932,7 +1932,7 @@ PrefabInstance:
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: -0.035
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -2012,7 +2012,7 @@ PrefabInstance:
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0.055
+      value: 0.0575
       objectReference: {fileID: 0}
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -2302,7 +2302,7 @@ PrefabInstance:
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: -0.035
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -2327,7 +2327,7 @@ PrefabInstance:
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0.055
+      value: 0.0575
       objectReference: {fileID: 0}
     - target: {fileID: 7653660955729789209, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -2482,7 +2482,7 @@ PrefabInstance:
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: -0.035
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
@@ -2562,7 +2562,7 @@ PrefabInstance:
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0.055
+      value: 0.0575
       objectReference: {fileID: 0}
     - target: {fileID: 7653660955729789208, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
