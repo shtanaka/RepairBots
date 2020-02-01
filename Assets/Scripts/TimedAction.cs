@@ -43,7 +43,7 @@ public class TimedAction : MonoBehaviour
         counter += Time.deltaTime;
         remainder = counter - timer;
         if(hasDisplayText) {
-            displayText.text = (showTimerDecreasing) ? String.Format("{0:0}", counter) : String.Format("{0:0}", -remainder);
+            displayText.text = (showTimerDecreasing) ? String.Format("{0:0.0}", counter) : String.Format("{0:0.0}", -(remainder));
         }
 
         if(remainder >= 0.001f) {
