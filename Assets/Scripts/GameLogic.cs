@@ -54,6 +54,14 @@ public class GameLogic : MonoBehaviour
     [Tooltip("Everytime game, the initial countdown is random instead of fixed.")]
     private bool startWithRandomTimers;
 
+    [SerializeField]
+    [Tooltip("Chance of Bad Event after damage.")]
+    [Range(0.0f, 100.0f)]
+    private float chanceOfBadEvent;
+
+    [SerializeField]
+    private GameObject[] listOfBadEvents;
+
     private void Start() {
         startGameEvents.Invoke();
     }
@@ -80,5 +88,13 @@ public class GameLogic : MonoBehaviour
 
     public bool DoesStartWithRandomTimers() {
         return startWithRandomTimers;
+    }
+
+    public void randomizeBadEvents() {
+        if(Random.Range(0.0f, 100.0f) < chanceOfBadEvent) {
+            int count = listOfBadEvents.Length;
+
+            listOfBadEvents[Random.Range(0, count - 1)].SetActive(true);
+        }
     }
 }
