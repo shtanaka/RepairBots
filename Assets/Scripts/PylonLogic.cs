@@ -9,9 +9,13 @@ public class PylonLogic : MonoBehaviour
     private Animator animatorPanel;
     [SerializeField]
     private Animator animatorRotation;
+    [SerializeField]
+    private MoveTowardsColor backpanelMoveTowardsColor;
 
     public void setLifeAnimationSpeed(MoveTowardsColor moveTowardsColor) {
-        animatorPanel.SetFloat("Progress", moveTowardsColor.getIncrementalStep());
-        animatorRotation.SetFloat("LifeSpeed", moveTowardsColor.getIncrementalStep());
+        float incrementalStep = moveTowardsColor.getIncrementalStep();
+        animatorPanel.SetFloat("Progress", incrementalStep);
+        animatorRotation.SetFloat("LifeSpeed", incrementalStep);
+        backpanelMoveTowardsColor.StepTowardsColor(incrementalStep);
     }
 }
