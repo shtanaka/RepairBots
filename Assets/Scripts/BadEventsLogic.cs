@@ -27,6 +27,8 @@ public class BadEventsLogic : MonoBehaviour
         if(cg != null) {
             cg.colorFilter.value = Color.white;
         }
+
+        DeactivateTurboMode();
     }
 
     public void setChromaticAberrationValue(float value) {
@@ -34,6 +36,14 @@ public class BadEventsLogic : MonoBehaviour
         profile.TryGetSettings<ChromaticAberration>(out ca);
         if(ca != null) {
             ca.intensity.value = value;
+        }
+    }
+
+    public void setContrast(float value) {
+        ColorGrading cg = null;
+        profile.TryGetSettings<ColorGrading>(out cg);
+        if(cg != null) {
+            cg.contrast.value = value;
         }
     }
 
@@ -62,5 +72,17 @@ public class BadEventsLogic : MonoBehaviour
             canvasAnimator.SetFloat("BlendCleanerRobot", 0.0f);
             canvasAnimator.SetTrigger("RemoveCleanerRobot");
         }
+    }
+
+    public void ActivateTurboMode() {
+        Time.timeScale = 1.5f;
+        setChromaticAberrationValue(1.0f);
+        setContrast(90);
+    }
+
+    public void DeactivateTurboMode() {
+        Time.timeScale = 1.0f;
+        setChromaticAberrationValue(0.0f);
+        setContrast(36);
     }
 }

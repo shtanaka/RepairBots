@@ -62,6 +62,9 @@ public class GameLogic : MonoBehaviour
     [SerializeField]
     private GameObject[] listOfBadEvents;
 
+    [SerializeField]
+    private int forceEvent = -1;
+
     private void Start() {
         startGameEvents.Invoke();
     }
@@ -95,7 +98,11 @@ public class GameLogic : MonoBehaviour
         if(Random.Range(0.0f, 100.0f) < chanceOfBadEvent) {
             int count = listOfBadEvents.Length;
 
-            listOfBadEvents[Random.Range(0, count)].SetActive(true);
+            GameObject badEvent = (forceEvent == -1) ? listOfBadEvents[Random.Range(0, count)] : listOfBadEvents[Mathf.Min(count - 1, Mathf.Max(forceEvent, 0))];
+            Debug.Log(badEvent);
+            if(!badEvent.activeSelf) {
+                badEvent.SetActive(true);
+            }
         }
     }
 }
