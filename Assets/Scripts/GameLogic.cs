@@ -16,6 +16,10 @@ public class GameLogic : MonoBehaviour
         }
     }
 
+    public static GameLogic GetInstance() {
+        return GameLogic.instance;
+    }
+
     [SerializeField]
     private UnityEvent startGameEvents;
 
@@ -46,6 +50,10 @@ public class GameLogic : MonoBehaviour
     [Range(0.0f, 40.0f)]
     private float maximalTimerBadEvents;
 
+    [SerializeField]
+    [Tooltip("Everytime game, the initial countdown is random instead of fixed.")]
+    private bool startWithRandomTimers;
+
     private void Start() {
         startGameEvents.Invoke();
     }
@@ -68,5 +76,9 @@ public class GameLogic : MonoBehaviour
     public void RestartGame() {
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
+    }
+
+    public bool DoesStartWithRandomTimers() {
+        return startWithRandomTimers;
     }
 }

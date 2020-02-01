@@ -171,6 +171,7 @@ MonoBehaviour:
   maximalTimerPylon: 8
   minimalTimerBadEvents: 5
   maximalTimerBadEvents: 15
+  startWithRandomTimers: 0
 --- !u!4 &55165083
 Transform:
   m_ObjectHideFlags: 0
@@ -984,6 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 443763946}
   animationSpeedVariation: {x: 0.8, y: 1.2}
+  timedAction: {fileID: 0}
 --- !u!95 &443763946
 Animator:
   serializedVersion: 3
@@ -1099,6 +1101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100517298}
     m_Modifications:
+    - target: {fileID: 37487154, guid: 017d7f21b6d314919a86d90578ec30be, type: 3}
+      propertyPath: timedAction
+      value: 
+      objectReference: {fileID: 725197661}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[5].m_Target
@@ -1467,6 +1473,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 725197659}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &725197661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7653660955729789209, guid: 017d7f21b6d314919a86d90578ec30be,
+    type: 3}
+  m_PrefabInstance: {fileID: 725197659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443763941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c108d4fbe134fa09217a2c768f718d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903040025
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,6 +6521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1092508018}
   animationSpeedVariation: {x: 0.8, y: 1.2}
+  timedAction: {fileID: 0}
 --- !u!95 &1092508018
 Animator:
   serializedVersion: 3
@@ -6696,6 +6715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1237596050}
   animationSpeedVariation: {x: 0.8, y: 1.2}
+  timedAction: {fileID: 0}
 --- !u!114 &1237596047 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7653660955729789209, guid: 017d7f21b6d314919a86d90578ec30be,
@@ -7256,6 +7276,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100517298}
     m_Modifications:
+    - target: {fileID: 37487154, guid: 017d7f21b6d314919a86d90578ec30be, type: 3}
+      propertyPath: timedAction
+      value: 
+      objectReference: {fileID: 1237596047}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[5].m_Target
@@ -7642,6 +7666,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100517298}
     m_Modifications:
+    - target: {fileID: 37487154, guid: 017d7f21b6d314919a86d90578ec30be, type: 3}
+      propertyPath: timedAction
+      value: 
+      objectReference: {fileID: 1791784822}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -7805,6 +7833,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1791784820}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1791784822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7653660955729789209, guid: 017d7f21b6d314919a86d90578ec30be,
+    type: 3}
+  m_PrefabInstance: {fileID: 1791784820}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c108d4fbe134fa09217a2c768f718d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7653660956787169399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7812,6 +7852,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100517298}
     m_Modifications:
+    - target: {fileID: 37487154, guid: 017d7f21b6d314919a86d90578ec30be, type: 3}
+      propertyPath: timedAction
+      value: 
+      objectReference: {fileID: 1092508014}
     - target: {fileID: 5996475157547055519, guid: 017d7f21b6d314919a86d90578ec30be,
         type: 3}
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[5].m_Target
