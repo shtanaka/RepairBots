@@ -7,4 +7,8 @@ public class DeactivateSelf : MonoBehaviour
     public void Deactivate() {
         gameObject.SetActive(false);
     }
+
+    public void DeactivateOther(GameObject anotherGameObject) {
+        anotherGameObject.SetActive(false);
+    }
 }
