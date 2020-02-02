@@ -1525,7 +1525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: v0.7 - real bots
+  m_Text: v0.8 - test bots - vote for me, plis
 --- !u!222 &1767423974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1680,13 +1680,48 @@ PrefabInstance:
     - target: {fileID: 7402232278369290909, guid: 09e54e5a8eccd446495ebbd1644acd73,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 743360958}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402232278369290915, guid: 09e54e5a8eccd446495ebbd1644acd73,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: HardScene5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e54e5a8eccd446495ebbd1644acd73, type: 3}
 --- !u!224 &1815562881 stripped
@@ -6636,6 +6671,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: c2c4bd772187c4666adc9f231abe168a, type: 3}
+    - target: {fileID: 5308761661662522789, guid: 1b2050b0696d54120a516a8f60d4c0ab,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8603448987918219298, guid: 1b2050b0696d54120a516a8f60d4c0ab,
         type: 3}
       propertyPath: m_LocalPosition.x
