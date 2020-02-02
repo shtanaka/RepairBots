@@ -1367,7 +1367,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: v0.5 - chat bots
+  m_Text: v0.6 - cute bots
 --- !u!222 &1767423974
 CanvasRenderer:
   m_ObjectHideFlags: 0
