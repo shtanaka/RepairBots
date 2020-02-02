@@ -27,12 +27,18 @@ public class MoveTowardsColor : MonoBehaviour
 
     private float incrementalStep;
 
+    [SerializeField]
+    private float accumulatePositive;
+
     void Awake() {
         incrementalStep = 0.0f;
     }
 
     public void StepTowardsColor(float step) {
         incrementalStep = Mathf.Max(0.0f, Mathf.Min(1.0f, incrementalStep + step));
+        if(step > 0) {
+            accumulatePositive += step;
+        }
         image.color = Color.Lerp(initialColor, finalColor, incrementalStep);
         if(tickEventToCall != null) {
             tickEventToCall.Invoke();
@@ -51,5 +57,9 @@ public class MoveTowardsColor : MonoBehaviour
 
     public float getIncrementalStep() {
         return incrementalStep;
+    }
+
+    public float getAccumulatePositive() {
+        return accumulatePositive;
     }
 }
