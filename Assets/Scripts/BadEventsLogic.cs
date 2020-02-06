@@ -23,19 +23,7 @@ public class BadEventsLogic : MonoBehaviour
     private GameObject chatBotGameObject;
 
     public void Start() {
-        ChromaticAberration ca = null;
-        profile.TryGetSettings<ChromaticAberration>(out ca);
-        if(ca != null) {
-            ca.intensity.value = 0;
-        }
-
-        ColorGrading cg = null;
-        profile.TryGetSettings<ColorGrading>(out cg);
-        if(cg != null) {
-            cg.colorFilter.value = Color.white;
-        }
-
-        DeactivateTurboMode();
+        ResetEffects();
     }
 
     public void setChromaticAberrationValue(float value) {
@@ -97,5 +85,21 @@ public class BadEventsLogic : MonoBehaviour
         if(!chatBotGameObject.activeSelf) {
             chatBotEvent.Invoke();
         }
+    }
+
+    public void ResetEffects() {
+        ChromaticAberration ca = null;
+        profile.TryGetSettings<ChromaticAberration>(out ca);
+        if(ca != null) {
+            ca.intensity.value = 0;
+        }
+
+        ColorGrading cg = null;
+        profile.TryGetSettings<ColorGrading>(out cg);
+        if(cg != null) {
+            cg.colorFilter.value = Color.white;
+        }
+
+        DeactivateTurboMode();
     }
 }
