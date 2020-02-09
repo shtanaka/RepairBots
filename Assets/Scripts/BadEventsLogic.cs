@@ -22,6 +22,12 @@ public class BadEventsLogic : MonoBehaviour
     [SerializeField]
     private GameObject chatBotGameObject;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField, Range(-3.0f, 3.0f)]
+    private float regularPitch;
+
     public void Start() {
         ResetEffects();
     }
@@ -39,6 +45,14 @@ public class BadEventsLogic : MonoBehaviour
         profile.TryGetSettings<ColorGrading>(out cg);
         if(cg != null) {
             cg.contrast.value = value;
+        }
+    }
+
+    public void setSaturation(float value) {
+        ColorGrading cg = null;
+        profile.TryGetSettings<ColorGrading>(out cg);
+        if(cg != null) {
+            cg.saturation.value = value;
         }
     }
 
@@ -69,16 +83,27 @@ public class BadEventsLogic : MonoBehaviour
         }
     }
 
+    public void ActivateSlowMode() {
+        Time.timeScale = 0.8f;
+        audioSource.pitch = 0.8f;
+        setChromaticAberrationValue(0.1f);
+        setContrast(50);
+        setSaturation(-40);
+    }
+
     public void ActivateTurboMode() {
         Time.timeScale = 1.5f;
+        audioSource.pitch = 1.5f;
         setChromaticAberrationValue(1.0f);
         setContrast(90);
     }
 
     public void DeactivateTurboMode() {
         Time.timeScale = 1.0f;
+        audioSource.pitch = regularPitch;
         setChromaticAberrationValue(0.0f);
         setContrast(36);
+        setSaturation(0);
     }
 
     public void CheckChatBotAvailability() {

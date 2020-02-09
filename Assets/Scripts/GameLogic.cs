@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -13,8 +11,8 @@ public class GameLogic : MonoBehaviour
         if(GameLogic.instance == null) {
             GameLogic.instance = this;
         } else {
-            Destroy(this);
-            Debug.LogError("The Game already has a GameLogic instance!");
+            Destroy(GameLogic.instance);
+            GameLogic.instance = this;
         }
     }
 

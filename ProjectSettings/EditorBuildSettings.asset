@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/HardScene5.unity
-    guid: 5e1d8d25a5a944d15a2f22677d05ff7c
+    path: Assets/Scenes/HardScene6.unity
+    guid: ec936ae50be7247d2bcbb0b4d176fd94
   m_configObjects: {}
